@@ -17,6 +17,10 @@ export SERVICE_ACCOUNT=$(yc iam service-account create --name service-account-fo
 ```
 yc iam service-account list
 ```
+- Для создания ключа доступа необходимо вызвать следующую команду:
+```
+yc iam access-key create --service-account-name service-account-for-cf
+```
 
 - Запись ID сервисного эккаунта в переменную SERVICE_ACCOUNT_ID
 
