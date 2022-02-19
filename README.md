@@ -77,3 +77,7 @@ yc serverless function allow-unauthenticated-invoke my-first-function
 ```
 yc serverless function get my-first-function 
 ```
+- Назначение тэга версии функции (в примере тэг first)
+```
+yc serverless function version set-tag --id d4ekroio80a0re4q5f9j --tag first
+```
