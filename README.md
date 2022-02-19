@@ -51,7 +51,17 @@ yc serverless function list
 ```
 yc serverless function version list --function-name my-first-function 
 ```
-
+- В директории с файлом index.py, вызовите приведённую ниже команду. Это позволит вам загрузить код функции в облако и создать её версию:
+```
+yc serverless function version create \
+    --function-name my-first-function \
+    --memory 256m \
+    --execution-timeout 5s \
+    --runtime python37 \
+    --entrypoint index.handler \
+    --service-account-id $SERVICE_ACCOUNT_ID \
+    --source-path index.py 
+```
 - Вызов функции по FUNCTION ID
 
 ```
